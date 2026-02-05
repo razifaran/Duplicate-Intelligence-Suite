@@ -1,53 +1,43 @@
 # 📂 Duplicate Intelligence Suite
 
-A powerful, two-step Python utility designed to reclaim storage space by identifying and managing duplicate files. This suite is optimized for speed, using a **1KB Header Hashing** method that allows it to scan thousands of files in seconds without high CPU overhead.
-
-## ✨ Features
-- **Fast Indexing:** Only reads the first 1KB of data to verify file identity.
-- **Safety First:** Read-only hashing ensures your original data is never corrupted.
-- **Non-Destructive:** The cleaner moves files to a recovery folder rather than deleting them instantly.
-- **Desktop Reporting:** Automatically generates easy-to-read text reports on your Desktop.
+A powerful tool to find duplicate files and reclaim your storage space. This suite is designed to be **safe** (it never deletes files) and **fast** (it only reads what it needs to identify a duplicate).
 
 ---
 
-## 🚀 How to Run (For New Users)
+## 🚀 1. Setup (One-Time Only)
 
-You don't need to be a programmer to use these tools. Follow these steps:
+To run these scripts, your computer needs "Python." Here is the easiest way to get it:
 
-### Step 1: Install Python
-Ensure you have Python installed on your computer. 
-- **Windows:** Download from [Python.org](https://www.python.org/) or the Microsoft Store.
-- **Mac/Linux:** Usually comes pre-installed.
+- **Windows:** Open the **Microsoft Store**, search for **"Python 3.12"**, and click **Get**.
+- **Mac:** Open your **Terminal** (Press Cmd + Space, type "Terminal"), type `python3`, and follow the prompt to install.
 
-### Step 2: Download the Scripts
-Download the `.py` files from this repository to a folder on your computer.
+---
 
-### Step 3: Open the Terminal or Command Prompt
-1. Open your "Command Prompt" (Windows) or "Terminal" (Mac).
-2. Type `python` followed by a space.
-3. Drag and drop the script file (`dupe_report_master.py` or `dupe_recovery_cleaner.py`) into the window. It will look something like this:
-   `python C:\Users\YourName\Desktop\dupe_report_master.py`
-4. Press **Enter**.
+## 💻 2. How to Run the Scripts
 
-### Step 4: Paste your Folder Path
-The script will ask you to "Paste the folder path." 
-- Go to the folder you want to scan.
-- Copy the address bar at the top of your file explorer.
-- Paste it into the black window and press **Enter**.
+You do not need to write any code. Just follow these steps:
+
+1. **Open your Command Line:**
+   - **Windows:** Press the `Windows Key`, type `cmd`, and press Enter.
+   - **Mac:** Press `Cmd + Space`, type `Terminal`, and press Enter.
+
+2. **The Drag-and-Drop Method:**
+   - Type the word `python` followed by a **space**.
+   - Drag the script file (like `dupe_report.py`) from your folder and drop it right into the black window.
+   
+   **It should look like this before you press Enter:**
+   `C:\> python "C:\Users\Name\Desktop\dupe_report.py"`
+
+3. **Press Enter.**
 
 ---
 
 ## 🛠 Which Tool Should I Use?
 
-### 1. The Scanner (`dupe_report_master.py`)
-**Best for:** Auditing. 
-This script scans your folder and creates a report on your Desktop showing exactly how much space you could save and where the duplicates are located. It **does not move or change** any files.
+### 🔎 Step 1: The Scanner (`dupe_report.py`)
+Run this first. It scans your folder and puts a **Report** on your Desktop. It shows you exactly how much space you are wasting and where the duplicates are. **It does not move any files.**
 
-### 2. The Cleaner (`dupe_recovery_cleaner.py`)
-**Best for:** Action.
-This script finds the duplicates and moves them into a new folder named `RECOVERY_[FolderName]`. This allows you to double-check the files before you hit the delete button.
+### 🧹 Step 2: The Cleaner (`dupe_cleaner.py`)
+Run this to take action. It finds the duplicates and moves them into a new folder called **RECOVERY**. This allows you to double-check them before you delete them yourself.
 
----
-
-## 📝 License
-Distributed under the MIT License. See `LICENSE` for more information.
+> **💡 Pro Tip:** When the script asks you to "Paste the folder path," you can **drag and drop the target folder** into the window just like you did with the script!
